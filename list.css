@@ -1,0 +1,29 @@
+		.con{
+			display:flex;
+			cursor:pointer;
+			align-items: center;
+		}
+		.con input{
+			visibility:hidden;
+		}
+		.con i{
+			display: inline-block;
+			border-radius: 50%;
+			border: 2px solid black;
+			text-align:center;
+			color:transparent;
+			margin-right: 20px;
+			width:35px;
+			height:35px;
+			line-height:35px;
+		}
+		.text{
+			color: black;
+			font-size: 18px;
+		}
+		.con input:checked ~i{
+			color: blue;
+		}
+		.con input:checked ~.text{
+			color: blue;
+		}

@@ -1,0 +1,81 @@
+body{
+	margin: 0;
+	padding:0;
+	background: black;
+	height: 100vh;
+	display: flex;	
+	align-items: center;
+	justify-content: center;
+	
+}
+
+.developing{
+	width: 200px;
+	height: 200px;
+	box-sizing: border-box;
+	border-radius: 50%;
+/* 
+	#1st red curve
+ */
+	border-top: 10px solid #ff1744;
+	position: relative;
+	animation: anime1 2s linear infinite;
+}
+
+.developing::before,.developing::after{
+	content: '';
+	width: 200px;
+	height: 200px;
+	position: absolute;
+	left: 0;
+	top: -10px;
+	box-sizing: border-box;
+	border-radius: 50%;
+}
+
+.developing::before{
+/* 
+	#blue
+ */
+	border-top: 10px solid #40c4ff;
+/* 
+	#2nd curve
+ */
+	transform: rotate(120deg);
+}
+
+.developing::after{
+/* 
+	#yellow
+ */
+	border-top: 10px solid #ffff00;
+/* 
+	#3rd curve
+ */
+	transform: rotate(240deg);
+}
+
+.developing span{
+	position: absolute;
+	width: 200px;
+	height: 200px;
+	color: white;
+	font-weight:bold;
+	text-align: center;
+	line-height: 200px;
+	animation: anime2 2s linear infinite;
+}
+
+@keyframes anime1{
+	to{
+		transform: rotate(360deg);
+	}
+}
+	
+@keyframes anime2{
+	to{
+		transform: rotate(-360deg);
+	}
+}
+		
+	

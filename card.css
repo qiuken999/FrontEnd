@@ -1,0 +1,32 @@
+/* 
+Created Date: July 27,2019
+COMP 8997
+ */
+		
+		.card{
+			cursor: pointer;
+		}
+		.front,.back{
+		width: 600px;
+			height: 350px;
+			tansition: transform 0.5s linear;
+			overflow: hidden;
+			backface-visibility: hidden;
+			position: absolute;
+		}
+		.front {
+			transform: perspective(600px) rotateY(0deg);
+		}
+		.back {
+			text-align:center;
+			border-radius: 5px;
+			background: black;
+			color:white;
+			transform: perspective(600px) rotateY(180deg);
+		}
+		.card:hover > .front {
+			transform: perspective(600px) rotateY(-180deg);
+		}
+		.card:hover > .back {
+			transform: perspective(600px) rotateY(0deg);
+		}
